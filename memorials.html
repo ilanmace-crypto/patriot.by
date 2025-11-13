@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="memorials">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Памятники - Память Победы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/memorial.css">
+    <script src="../assets/js/localization.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/memorial.js"></script>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">Память Победы</a>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Главная</a></li>
+                <li><a href="chronology.html" class="nav-link" data-i18n="nav.chronology">Хронология</a></li>
+                <li><a href="burned-villages.html" class="nav-link" data-i18n="nav.villages">Сожженные деревни</a></li>
+                <li><a href="genocide.html" class="nav-link" data-i18n="nav.genocide">Геноцид</a></li>
+                <li><a href="liberation.html" class="nav-link" data-i18n="nav.liberation">Освобождение</a></li>
+                <li><a href="memorials.html" class="nav-link active" data-i18n="nav.memorials">Памятники</a></li>
+                <li><a href="lessons.html" class="nav-link" data-i18n="nav.lessons">Уроки</a></li>
+                <li><a href="quiz.html" class="nav-link" data-i18n="nav.quiz">Квиз</a></li>
+            </ul>
+            
+            <div class="nav-utilities">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="be">BE</button>
+                </div>
+                <button class="theme-toggle theme-toggle--nav" type="button" aria-label="Toggle theme">
+                    <span class="sun">☀️</span><span class="moon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header" style="background-image: url('../assets/img/memorial.jpg');">
+        <div class="page-header-content">
+            <h1 class="page-title" data-i18n="header.title">Увековечение памяти</h1>
+            <p class="page-subtitle" data-i18n="header.subtitle">Памятники жертвам геноцида и воинам-освободителям</p>
+        </div>
+    </header>
+    
+    <main class="modern-main">
+        <section>
+            <h2 data-i18n="section.title">Памятники жертвам геноцида и воинам</h2>
+            <p data-i18n="section.description">В Ошмянском районе установлены памятники жертвам геноцида и воинам-освободителям, чтобы сохранить память о трагедии и подвиге.</p>
+            
+            <div class="memorials-grid">
+                <div class="memorial-card">
+                    <img src="../assets/img/ugleevo.jpg" alt="Урочище Углеево" class="memorial-image" data-i18n="cards.0.image" data-i18n-attr="alt">
+                    <div class="memorial-content">
+                        <h3 data-i18n="cards.0.title">Урочище Углеево</h3>
+                        <div class="memorial-stats">
+                            <span class="victims" data-i18n="cards.0.victims">700 жертв</span>
+                            <span class="date" data-i18n="cards.0.date">21 октября 1942 г.</span>
+                        </div>
+                        <p data-i18n="cards.0.description">Памятник 700 евреям, расстрелянным 21 октября 1942 г. Установлен в 1950 г., обновлён в 2008 г. Надпись на белорусском и иврите.</p>
+                        <div class="memorial-location">
+                            <span class="location" data-i18n="cards.0.location">📍 Около д. Толминово</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memorial-card">
+                    <img src="../assets/img/lugovschina.jpg" alt="Урочище Люговщина" class="memorial-image" data-i18n="cards.1.image" data-i18n-attr="alt">
+                    <div class="memorial-content">
+                        <h3 data-i18n="cards.1.title">Урочище Люговщина</h3>
+                        <div class="memorial-stats">
+                            <span class="victims" data-i18n="cards.1.victims">573 жертвы</span>
+                            <span class="date" data-i18n="cards.1.date">лето 1941 г.</span>
+                        </div>
+                        <p data-i18n="cards.1.description">Памятник на месте расстрела 573 евреев Ошмянского гетто летом 1941 года. Установлен в 1960 г., обновлён в 2010 г.</p>
+                        <div class="memorial-location">
+                            <span class="location" data-i18n="cards.1.location">📍 Около д. Бартели</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memorial-card">
+                    <img src="../assets/img/rosto.jpg" alt="Урочище Ройста" class="memorial-image" data-i18n="cards.2.image" data-i18n-attr="alt">
+                    <div class="memorial-content">
+                        <h3 data-i18n="cards.2.title">Урочище Ройста</h3>
+                        <div class="memorial-stats">
+                            <span class="victims" data-i18n="cards.2.victims">353 жертвы</span>
+                            <span class="date" data-i18n="cards.2.date">1967 г.</span>
+                        </div>
+                        <p data-i18n="cards.2.description">Памятник 353 евреям, установлен в 1967 г. Надпись: «Жертвам фашизма».</p>
+                        <div class="memorial-location">
+                            <span class="location" data-i18n="cards.2.location">📍 Юго-восток от д. Ягеловщина</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="memorial-card">
+                    <div class="memorial-icon">⭐</div>
+                    <div class="memorial-content">
+                        <h3 data-i18n="cards.3.title">Другие памятники</h3>
+                        <p data-i18n="cards.3.text">Памятники воинам в Полянах (1967), Щепановичах (1967), Габрияловщине (1967), Жупранах (1967), Новосёлках (1967), Семерниках (1967).</p>
+                        <div class="memorial-location">
+                            <span class="location" data-i18n="cards.3.location">📍 По всему Ошмянскому району</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="memory-section">
+                <h3 data-i18n="gallery.title">Фотогалерея памяти</h3>
+                <p data-i18n="gallery.description">Мемориалы и памятные места Ошмянского района</p>
+                <div class="modern-slider">
+                    <div class="slider-container">
+                        <div class="slider-images">
+                            <img src="../assets/img/memorial1.jpg" alt="Мемориал 1" class="slide-img" data-i18n="gallery.images.0.alt" data-i18n-attr="alt">
+                            <img src="../assets/img/memorial2.jpg" alt="Мемориал 2" class="slide-img" data-i18n="gallery.images.1.alt" data-i18n-attr="alt">
+                            <img src="../assets/img/memorial3.jpg" alt="Мемориал 3" class="slide-img" data-i18n="gallery.images.2.alt" data-i18n-attr="alt">
+                            <img src="../assets/img/memorial4.jpg" alt="Мемориал 4" class="slide-img" data-i18n="gallery.images.3.alt" data-i18n-attr="alt">
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev-btn">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button class="slider-btn next-btn">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="slider-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.author.title">Автор проекта</h4>
+                    <p>Браницкий Илья Витальевич, учащийся УО «Ошмянский государственный аграрно-экономический колледж»</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.contacts.title">Контакты</h4>
+                    <p><a href="mailto:Ilanmace@gmail.com">Ilanmace@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.sources.title">Источники</h4>
+                    <p>Архивы Ошмянского краеведческого музея им. Ф. Богушевича</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

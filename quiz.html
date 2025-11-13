@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="quiz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Квиз - Память Победы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+    <script src="../assets/js/localization.js"></script>
+    <script src="../assets/js/script.js"></script>
+</head>
+<body class="quiz-body">
+    <canvas id="particles-canvas"></canvas>
+    
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">Память Победы</a>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Главная</a></li>
+                <li><a href="chronology.html" class="nav-link" data-i18n="nav.chronology">Хронология</a></li>
+                <li><a href="burned-villages.html" class="nav-link" data-i18n="nav.villages">Сожженные деревни</a></li>
+                <li><a href="genocide.html" class="nav-link" data-i18n="nav.genocide">Геноцид</a></li>
+                <li><a href="liberation.html" class="nav-link" data-i18n="nav.liberation">Освобождение</a></li>
+                <li><a href="memorials.html" class="nav-link" data-i18n="nav.memorials">Памятники</a></li>
+                <li><a href="lessons.html" class="nav-link" data-i18n="nav.lessons">Уроки</a></li>
+                <li><a href="quiz.html" class="nav-link active" data-i18n="nav.quiz">Квиз</a></li>
+            </ul>
+            
+            <div class="nav-utilities">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="be">BE</button>
+                </div>
+                <button class="theme-toggle theme-toggle--nav" type="button" aria-label="Toggle theme">
+                    <span class="sun">☀️</span><span class="moon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header" style="background-image: url('../assets/img/qiz.jpg');">
+        <div class="page-header-content">
+            <h1 class="page-title" data-i18n="header.title">Исторический квиз</h1>
+            <p class="page-subtitle" data-i18n="header.subtitle">Проверь свои знания о трагедии Ошмянского района</p>
+        </div>
+    </header>
+    
+    <main class="modern-main">
+        <section id="quiz-section">
+            <div class="quiz-container">
+                <div id="progress-container">
+                    <div id="progress-bar">
+                        <div id="progress-fill"></div>
+                    </div>
+                    <div id="progress-text">Вопрос 1 из 10</div>
+                </div>
+                
+                <div id="timer-container">
+                    <div id="timer">⏱️ 30 сек</div>
+                </div>
+                
+                <div id="question-container">
+                    <h2 id="question">Когда началась Великая Отечественная война?</h2>
+                </div>
+                
+                <div id="options-container">
+                </div>
+                
+                <div id="quiz-controls">
+                    <button id="next-btn" data-i18n="quiz.next">Далее</button>
+                    <button id="restart-btn" class="quiz-btn hidden" data-i18n="quiz.results.restart">Пройти заново</button>
+                </div>
+                
+                <div id="result-container" class="hidden">
+                    <h3 id="results-title" data-i18n="quiz.results.title">Результаты</h3>
+                    <p id="results-text"><span data-i18n="quiz.results.correct">Правильных ответов:</span> <span id="score">0</span>/<span id="total">0</span></p>
+                    <p id="result-message"></p>
+                    <button id="share-btn" class="quiz-btn" data-i18n="quiz.share.button">Поделиться результатом</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.author.title">Автор проекта</h4>
+                    <p>Браницкий Илья Витальевич, учащийся УО «Ошмянский государственный аграрно-экономический колледж»</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.contacts.title">Контакты</h4>
+                    <p><a href="mailto:Ilanmace@gmail.com">Ilanmace@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.sources.title">Источники</h4>
+                    <p>Архивы Ошмянского краеведческого музея им. Ф. Богушевича</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../assets/js/quiz-data.js"></script>
+    <script src="../assets/js/quiz.js"></script>
+</body>
+</html>

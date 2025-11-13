@@ -1,0 +1,329 @@
+.overview {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border-left: 5px solid #8B0000;
+}
+
+.ghetto-facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.fact-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #8B0000;
+    transition: all 0.3s ease;
+}
+
+.fact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(139, 0, 0, 0.15);
+}
+
+.fact-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.fact-item h4 {
+    color: #8B0000;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.fact-item p {
+    color: #333;
+    font-weight: 500;
+    margin: 0;
+}
+
+.tragedy-stages {
+    margin: 50px 0;
+}
+
+.tragedy-card {
+    background: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #8B0000;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.tragedy-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(139, 0, 0, 0.15);
+}
+
+.tragedy-icon {
+    font-size: 2em;
+    background: linear-gradient(135deg, #8B0000, #006400);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.tragedy-card h3 {
+    color: #8B0000;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.tragedy-card p {
+    line-height: 1.6;
+    color: #444;
+    margin: 0;
+}
+
+.righteous {
+    background: linear-gradient(135deg, #e8f5e8, #d4edda);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 50px 0;
+    border-left: 5px solid #28a745;
+}
+
+.righteous h2 {
+    color: #155724;
+    margin-bottom: 10px;
+}
+
+.righteous > p {
+    color: #0c5460;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.righteous-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.righteous-person {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid #28a745;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.righteous-icon {
+    font-size: 2em;
+    color: #28a745;
+}
+
+.righteous-person h4 {
+    color: #155724;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.righteous-person p {
+    color: #0c5460;
+    margin: 0;
+    font-size: 0.95em;
+}
+
+.survivors {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 50px 0;
+    border-left: 5px solid #856404;
+}
+
+.survivors h2 {
+    color: #856404;
+    margin-bottom: 10px;
+}
+
+.survivors > p {
+    color: #856404;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.survivors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.survivor-name {
+    background: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    color: #856404;
+    font-weight: 500;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffeaa7;
+    transition: all 0.3s ease;
+}
+
+.survivor-name:hover {
+    background: #856404;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.memory-section {
+    background: linear-gradient(135deg, #8B0000, #006400);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.memory-section h2 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.memory-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.memory-btn {
+    background: white;
+    color: #8B0000;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.memory-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+.tragedy-card,
+.fact-item,
+.righteous-person {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .overview {
+        padding: 30px 20px;
+    }
+    
+    .ghetto-facts {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .fact-item {
+        padding: 20px 15px;
+    }
+    
+    .tragedy-card {
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .tragedy-icon {
+        align-self: center;
+    }
+    
+    .righteous {
+        padding: 30px 20px;
+    }
+    
+    .righteous-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .righteous-person {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .survivors {
+        padding: 30px 20px;
+    }
+    
+    .survivors-list {
+        gap: 10px;
+    }
+    
+    .survivor-name {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+    
+    .memory-section {
+        padding: 40px 20px;
+    }
+    
+    .memory-btn {
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .ghetto-facts {
+        grid-template-columns: 1fr;
+    }
+    
+    .fact-item {
+        padding: 25px 20px;
+    }
+    
+    .tragedy-card {
+        padding: 25px 20px;
+    }
+    
+    .memory-section {
+        padding: 30px 15px;
+    }
+    
+    .memory-section h2 {
+        font-size: 1.7em;
+    }
+    
+    .memory-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}

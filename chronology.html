@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="chronology">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Хронология событий - Память Победы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/chronology.css">
+    <script src="../assets/js/localization.js"></script>
+    <script>
+        // Убеждаемся, что словарь доступен глобально
+        console.log('Localization script loaded');
+    </script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        // Проверяем после загрузки script.js
+        console.log('Script.js loaded, LOCALIZATION_DICTIONARY:', !!window.LOCALIZATION_DICTIONARY);
+        console.log('LocalizationManager:', !!window.localizationManager);
+    </script>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">Память Победы</a>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Главная</a></li>
+                <li><a href="chronology.html" class="nav-link active" data-i18n="nav.chronology">Хронология</a></li>
+                <li><a href="burned-villages.html" class="nav-link" data-i18n="nav.villages">Сожженные деревни</a></li>
+                <li><a href="genocide.html" class="nav-link" data-i18n="nav.genocide">Геноцид</a></li>
+                <li><a href="liberation.html" class="nav-link" data-i18n="nav.liberation">Освобождение</a></li>
+                <li><a href="memorials.html" class="nav-link" data-i18n="nav.memorials">Памятники</a></li>
+                <li><a href="lessons.html" class="nav-link" data-i18n="nav.lessons">Уроки</a></li>
+                <li><a href="quiz.html" class="nav-link" data-i18n="nav.quiz">Квиз</a></li>
+            </ul>
+            
+            <div class="nav-utilities">
+                <div class="lang-switch">
+                    <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+                    <button type="button" class="lang-btn" data-lang="be">BE</button>
+                </div>
+                <button class="theme-toggle theme-toggle--nav" type="button" aria-label="Toggle theme">
+                    <span class="sun">☀️</span><span class="moon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header" style="background-image: url('../assets/img/hronology.jpg');">
+        <div class="page-header-content">
+            <h1 class="page-title" data-i18n="header.title">Хронология Великой Отечественной войны</h1>
+            <p class="page-subtitle" data-i18n="header.subtitle">Ключевые события в Ошмянском районе 1941-1944 годов</p>
+        </div>
+    </header>
+    
+    <main class="modern-main">
+        <section class="chronology-intro">
+            <div class="chronology-banner">
+                <h2 class="chronology-headline" data-i18n="chronology.intro.headline">Временная лента трагедии и победы</h2>
+                <p class="chronology-lead" data-i18n="chronology.intro.lead">Следуйте по ключевым событиям оккупации, сопротивления и освобождения Ошмянского района. Каждое событие — это боль, мужество и шаг к свободе.</p>
+            </div>
+            <div class="chronology-metrics" data-chronology-metrics></div>
+        </section>
+
+        <section class="chronology-timeline">
+            <h2 data-i18n="chronology.timeline.title">Ключевые события оккупации и освобождения</h2>
+            <p data-i18n="chronology.timeline.description">Нажмите на любой пункт, чтобы увидеть подробности, фотографии и свидетельства эпохи.</p>
+            <div class="timeline" data-chronology-timeline></div>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Заголовок</h3>
+                <button class="close-modal" data-i18n="chronology.modal.close" data-i18n-attr="aria-label" aria-label="Закрыть">×</button>
+            </div>
+            <div class="modal-date" id="modalDate">Дата</div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+    
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.author.title">Автор проекта</h4>
+                    <p data-i18n="index.footer.author.desc">Браницкий Илья Витальевич, учащийся УО «Ошмянский государственный аграрно-экономический колледж»</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.contacts.title">Контакты</h4>
+                    <p><a href="mailto:Ilanmace@gmail.com" data-i18n="index.footer.contacts.email">Ilanmace@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.sources.title">Источники</h4>
+                    <p data-i18n="index.footer.sources.line1">Архивы Ошмянского краеведческого музея им. Ф. Богушевича</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">© 2025. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/chronology-page.js"></script>
+    <script>
+        // Финальная проверка после загрузки всех скриптов
+        window.addEventListener('load', function() {
+            console.log('=== PAGE FULLY LOADED ===');
+            console.log('LOCALIZATION_DICTIONARY:', !!window.LOCALIZATION_DICTIONARY);
+            console.log('localizationManager:', !!window.localizationManager);
+            console.log('Chronology metrics container:', !!document.querySelector('[data-chronology-metrics]'));
+            console.log('Chronology timeline container:', !!document.querySelector('[data-chronology-timeline]'));
+            console.log('Language buttons:', document.querySelectorAll('.lang-btn').length);
+            
+            // Принудительно перепривязываем кнопки языка
+            if (window.localizationManager) {
+                window.localizationManager.bindEvents();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="lessons">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Уроки истории - Память Победы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/lessons.css">
+    <script src="../assets/js/localization.js"></script>
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">Память Победы</a>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Главная</a></li>
+                <li><a href="chronology.html" class="nav-link" data-i18n="nav.chronology">Хронология</a></li>
+                <li><a href="burned-villages.html" class="nav-link" data-i18n="nav.villages">Сожженные деревни</a></li>
+                <li><a href="genocide.html" class="nav-link" data-i18n="nav.genocide">Геноцид</a></li>
+                <li><a href="liberation.html" class="nav-link" data-i18n="nav.liberation">Освобождение</a></li>
+                <li><a href="memorials.html" class="nav-link" data-i18n="nav.memorials">Памятники</a></li>
+                <li><a href="lessons.html" class="nav-link active" data-i18n="nav.lessons">Уроки</a></li>
+                <li><a href="quiz.html" class="nav-link" data-i18n="nav.quiz">Квиз</a></li>
+            </ul>
+            
+            <div class="nav-utilities">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="be">BE</button>
+                </div>
+                <button class="theme-toggle theme-toggle--nav" type="button" aria-label="Toggle theme">
+                    <span class="sun">☀️</span><span class="moon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header" style="background-image: url('../assets/img/lessons.jpg');">
+        <div class="page-header-content">
+            <h1 class="page-title" data-i18n="header.title">Уроки истории</h1>
+            <p class="page-subtitle" data-i18n="header.subtitle">Цена победы и память поколений</p>
+        </div>
+    </header>
+    
+    <main class="modern-main">
+        <section>
+            <h2 data-i18n="section.title">Исторические уроки</h2>
+            <p data-i18n="section.description">Изучение трагедии Ошмянского района помогает сохранить память и предотвратить повторение ошибок.</p>
+
+            <div class="modern-stats">
+                <div class="stat-modern">
+                    <span class="number">80%</span>
+                    <span class="label">молодёжи участвует в патриотических проектах</span>
+                </div>
+                <div class="stat-modern">
+                    <span class="number">250+</span>
+                    <span class="label">мемориалов отреставрировано за 5 лет</span>
+                </div>
+                <div class="stat-modern">
+                    <span class="number">95%</span>
+                    <span class="label">белорусов считают важным сохранение исторической памяти</span>
+                </div>
+                <div class="stat-modern">
+                    <span class="number">1000+</span>
+                    <span class="label">образовательных проектов о войне ежегодно</span>
+                </div>
+            </div>
+
+            <div class="lessons-grid">
+                <div class="lesson-card">
+                    <div class="lesson-icon">🤝</div>
+                    <div class="lesson-content">
+                        <h3 data-i18n="cards.0.title">Цена освобождения</h3>
+                        <p data-i18n="cards.0.text">Каждый освобождённый населённый пункт Ошмянского района стоил огромных жертв. Партизаны и солдаты Красной Армии отдали жизни за мирное будущее.</p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-icon">⭐</div>
+                    <div class="lesson-content">
+                        <h3 data-i18n="cards.1.title">Героизм народа</h3>
+                        <p data-i18n="cards.1.text">Белорусский народ проявил невероятный героизм в сопротивлении нацистам. Тысячи партизан и подпольщиков сражались за свободу.</p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-icon">🕊️</div>
+                    <div class="lesson-content">
+                        <h3 data-i18n="cards.2.title">Память о жертвах</h3>
+                        <p data-i18n="cards.2.text">Мы обязаны помнить о всех жертвах войны: мирных жителях, солдатах, партизанах. Их жертвы не должны быть забыты.</p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-icon">🇧🇾</div>
+                    <div class="lesson-content">
+                        <h3 data-i18n="cards.3.title">Истинный патриотизм</h3>
+                        <p data-i18n="cards.3.text">Патриотизм - это не громкие лозунги, а повседневная работа на благо страны. Студенты Ошмянского колледжа участвуют в экологических акциях, благоустройстве территорий, социальных проектах.</p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-icon">📚</div>
+                    <div class="lesson-content">
+                        <h3 data-i18n="cards.4.title">Важность образования</h3>
+                        <p data-i18n="cards.4.text">Историческая правда - лучшее оружие против фальсификаций. Образовательные проекты, научные конференции, студенческие исследования сохраняют память о войне для будущих поколений.</p>
+                    </div>
+                </div>
+
+                <div class="lesson-card">
+                    <div class="lesson-icon">🌍</div>
+                    <div class="lesson-content">
+                        <h3 data-i18n="cards.5.title">Международное сотрудничество</h3>
+                        <p data-i18n="cards.5.text">Совместные проекты с музеями Европы, обмен студентами, международные конференции - всё это помогает сохранять объективную историческую память.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote-section">
+                <div class="quote-text" data-i18n="quote.text">"Борьба за место в мировой иерархии вновь стала обыденной. Белорусы знают цену мира и защищают героическую историю."</div>
+                <div class="quote-author" data-i18n="quote.author">— Президент Республики Беларусь</div>
+            </div>
+
+            <div class="call-to-action">
+                <h2 data-i18n="call-to-action.title">Присоединяйтесь к сохранению памяти!</h2>
+                <p data-i18n="call-to-action.description">Каждый может внести свой вклад в сохранение исторической правды и воспитание молодого поколения</p>
+                <button class="action-btn" data-i18n="call-to-action.button" onclick="showParticipationOptions()">Узнать, как помочь</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.author.title">Автор проекта</h4>
+                    <p>Браницкий Илья Витальевич, учащийся УО «Ошмянский государственный аграрно-экономический колледж»</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.contacts.title">Контакты</h4>
+                    <p><a href="mailto:Ilanmace@gmail.com">Ilanmace@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.sources.title">Источники</h4>
+                    <p>Архивы Ошмянского краеведческого музея им. Ф. Богушевича</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/lessons.js"></script>
+</body>
+</html>

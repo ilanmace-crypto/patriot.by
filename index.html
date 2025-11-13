@@ -1,0 +1,168 @@
+ <!DOCTYPE html>
+<html lang="ru" data-page="index">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Помнить уроки своей истории: цена Победы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/localization.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    
+    <header class="hero-header">
+        <div class="hero-bg"></div>
+        <div class="header-content">
+            <div class="hero-text">
+                <h1 class="hero-title" data-i18n="hero.title">Помнить уроки своей истории: цена Победы</h1>
+                <p class="hero-subtitle" data-i18n="hero.subtitle">Геноцид белорусского народа в Ошмянском районе во время Великой Отечественной войны</p>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+    
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand" data-i18n="nav.brand">Память Победы</a>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Главная</a></li>
+                <li><a href="pages/chronology.html" class="nav-link" data-i18n="nav.chronology">Хронология</a></li>
+                <li><a href="pages/burned-villages.html" class="nav-link" data-i18n="nav.villages">Сожженные деревни</a></li>
+                <li><a href="pages/genocide.html" class="nav-link" data-i18n="nav.genocide">Геноцид</a></li>
+                <li><a href="pages/liberation.html" class="nav-link" data-i18n="nav.liberation">Освобождение</a></li>
+                <li><a href="pages/memorials.html" class="nav-link" data-i18n="nav.memorials">Памятники</a></li>
+                <li><a href="pages/lessons.html" class="nav-link" data-i18n="nav.lessons">Уроки</a></li>
+                <li><a href="pages/quiz.html" class="nav-link" data-i18n="nav.quiz">Квиз</a></li>
+            </ul>
+            
+            <div class="nav-utilities">
+                <div class="lang-switch">
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="be">BE</button>
+                </div>
+                <button class="theme-toggle theme-toggle--nav" type="button" aria-label="Toggle theme">
+                    <span class="sun">☀️</span><span class="moon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="modern-main">
+        <section class="hero-section">
+            <div class="section-content">
+                <h2 class="section-title" data-i18n="hero.section.title">Добро пожаловать</h2>
+                <p class="section-text" data-i18n="hero.section.text">Мы рассказываем о трагедии сожжённых деревень, ужасах Ошмянского гетто, подвиге освободителей и уроках, которые нельзя забывать. В 2025 году, в Год благоустройства и 80-летия Победы, мы чтим героизм белорусского народа, потерявшего более 3 миллионов человек.</p>
+                
+                <div class="modern-slider main-slider">
+                    <div class="slider-container">
+                        <div class="slider-images">
+                            <img src="assets/img/Picture3.jpg" class="slide-img" data-i18n="hero.slider1.alt" data-i18n-attr="alt" alt="Памятник павшим воинам" loading="eager">
+                            <img src="assets/img/Picture2.jpg" class="slide-img" data-i18n="hero.slider2.alt" data-i18n-attr="alt" alt="Ошмянский мемориал" loading="eager">
+                            <img src="assets/img/Picture1.jpg" class="slide-img" data-i18n="hero.slider3.alt" data-i18n-attr="alt" alt="Освобождение Ошмянского района" loading="eager">
+                        </div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev-btn">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button class="slider-btn next-btn">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="slider-dots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about-section">
+            <div class="section-content">
+                <h2 class="section-title" data-i18n="about.title">О проекте</h2>
+                <p class="section-text" data-i18n="about.text">Этот сайт создан в рамках патриотического воспитания молодёжи и сохранения исторической памяти. Мы собрали архивные данные, фотографии и свидетельства, чтобы передать правду о войне новым поколениям.</p>
+                
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <div class="card-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.card1.title">Историческая память</h3>
+                        <p data-i18n="about.card1.text">Сохранение правды о трагических событиях войны и геноциде белорусского народа</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.card2.title">Ошмянский район</h3>
+                        <p data-i18n="about.card2.text">Подробная информация о трагедии сожжённых деревень и Ошмянского гетто</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="card-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="about.card3.title">Патриотическое воспитание</h3>
+                        <p data-i18n="about.card3.text">Важные уроки истории для молодого поколения и сохранение национальной идентичности</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="footer.author.title">Автор проекта</h4>
+                    <p data-i18n="footer.author.name">Браницкий Илья Витальевич</p>
+                    <p data-i18n="footer.author.desc">Учащийся УО «Ошмянский государственный аграрно-экономический колледж»</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.contacts.title">Контакты</h4>
+                    <p><a href="mailto:Ilanmace@gmail.com">Ilanmace@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="footer.sources.title">Источники</h4>
+                    <p data-i18n="footer.sources.line1">Архивы Ошмянского краеведческого музея им. Ф. Богушевича</p>
+                    <p data-i18n="footer.sources.line2">Государственная чрезвычайная комиссия СССР</p>
+                    <p data-i18n="footer.sources.line3">Материалы УО «Ошмянский государственный аграрно-экономический колледж»</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025. Все права защищены. <span data-i18n="footer.motto">Помним. Гордимся. Чтим.</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                const slider = document.querySelector('.main-slider');
+                if (slider && slider.dataset.sliderInitialized !== 'true') {
+                    console.log('Финальная инициализация слайдера');
+                    new ModernSlider();
+                    slider.dataset.sliderInitialized = 'true';
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>

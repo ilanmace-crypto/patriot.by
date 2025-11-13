@@ -1,0 +1,276 @@
+.memorials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.memorial-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid #f8f9fa;
+}
+
+.memorial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(139, 0, 0, 0.15);
+}
+
+.memorial-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #8B0000;
+}
+
+.memorial-icon {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #8B0000, #006400);
+    color: white;
+    border-bottom: 3px solid #8B0000;
+}
+
+.memorial-content {
+    padding: 25px;
+}
+
+.memorial-card h3 {
+    color: #8B0000;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    border-left: 4px solid #006400;
+    padding-left: 15px;
+}
+
+.memorial-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.victims {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.date {
+    background: #d1ecf1;
+    color: #0c5460;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.memorial-content p {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.memorial-location {
+    border-top: 1px solid #e9ecef;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+
+.location {
+    color: #666;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.memory-section {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.memory-section h3 {
+    color: #8B0000;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.memory-section p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.slider-controls .slider-btn {
+    pointer-events: auto;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+.modern-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modern-slider .slider-images {
+    height: 400px;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.modern-slider .slider-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.modern-slider .prev-btn,
+.modern-slider .next-btn {
+    background: rgba(139, 0, 0, 0.8);
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modern-slider .prev-btn:hover,
+.modern-slider .next-btn:hover {
+    background: rgba(139, 0, 0, 1);
+    transform: scale(1.1);
+}
+
+.memorial-card {
+    animation: cardAppear 0.6s ease-out;
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .memorials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .memorial-image {
+        height: 200px;
+    }
+    
+    .memorial-icon {
+        height: 150px;
+        font-size: 3em;
+    }
+    
+    .memorial-content {
+        padding: 20px;
+    }
+    
+    .memory-section {
+        padding: 30px 20px;
+    }
+    
+    .modern-slider .slider-images {
+        height: 300px;
+    }
+    
+    .modern-slider .prev-btn,
+    .modern-slider .next-btn {
+        padding: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+    
+    .memorial-stats {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .memorial-image {
+        height: 180px;
+    }
+    
+    .modern-slider .slider-images {
+        height: 250px;
+    }
+    
+    .memory-section {
+        padding: 25px 15px;
+    }
+    
+    .memory-section h3 {
+        font-size: 1.5em;
+    }
+}

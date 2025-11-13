@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="villages">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Сожженные деревни - Память Победы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/burned-villages.css">
+    <script src="../assets/js/localization.js"></script>
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    <div class="fire-overlay"></div>
+    
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">Память Победы</a>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Главная</a></li>
+                <li><a href="chronology.html" class="nav-link" data-i18n="nav.chronology">Хронология</a></li>
+                <li><a href="burned-villages.html" class="nav-link active" data-i18n="nav.villages">Сожженные деревни</a></li>
+                <li><a href="genocide.html" class="nav-link" data-i18n="nav.genocide">Геноцид</a></li>
+                <li><a href="liberation.html" class="nav-link" data-i18n="nav.liberation">Освобождение</a></li>
+                <li><a href="memorials.html" class="nav-link" data-i18n="nav.memorials">Памятники</a></li>
+                <li><a href="lessons.html" class="nav-link" data-i18n="nav.lessons">Уроки</a></li>
+                <li><a href="quiz.html" class="nav-link" data-i18n="nav.quiz">Квиз</a></li>
+            </ul>
+            
+            <div class="nav-utilities">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="be">BE</button>
+                </div>
+                <button class="theme-toggle theme-toggle--nav" type="button" aria-label="Toggle theme">
+                    <span class="sun">☀️</span><span class="moon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header" style="background-image: url('../assets/img/derevny.jpg');">
+        <div class="page-header-content">
+            <h1 class="page-title" data-i18n="header.title">Карта памяти сожженных деревень</h1>
+            <p class="page-subtitle" data-i18n="header.subtitle">Вечная память уничтоженным деревням Ошмянского района и их жителям</p>
+        </div>
+    </header>
+
+    <main class="modern-main villages-container">
+        <section class="intro">
+            <h2 data-i18n="villages.intro.title">Уничтоженные деревни Ошмянского района</h2>
+            <p data-i18n="villages.intro.description">За годы оккупации нацисты уничтожили множество деревень Ошмянского района вместе с жителями. Тактика «выжженной земли» оставила после себя пепелища и тысячи разрушенных судеб.</p>
+
+            <div class="total-stats">
+                <h3 data-i18n="villages.stats.title">Статистика трагедии</h3>
+                <div class="stats-grid">
+                    <div class="total-stat">
+                        <span class="number">9</span>
+                        <span class="label" data-i18n="villages.stats.destroyed">деревень уничтожено</span>
+                    </div>
+                    <div class="total-stat">
+                        <span class="number">82+</span>
+                        <span class="label" data-i18n="villages.stats.civilians">мирных жителей погибло</span>
+                    </div>
+                    <div class="total-stat">
+                        <span class="number">369</span>
+                        <span class="label" data-i18n="villages.stats.houses">домов сожжено</span>
+                    </div>
+                    <div class="total-stat">
+                        <span class="number">1944</span>
+                        <span class="label" data-i18n="villages.stats.year">год самых массовых разрушений</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="villages-grid">
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.boruny.name">Боруны</h3>
+                    <span class="status-badge status-recovered" data-i18n="villages.status.recovered">восстановлена</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.boruny.date">июль 1944 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">4</span>
+                    </div>
+                    <div class="stat-item victims">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value">13</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">307</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.boruny.description">На сегодняшний день агрогородок Боруны — центр сельсовета. Стал известен в 1700 г. благодаря открытию здесь Базыльянского монастыря и школы, позже — боевым действиям Первой мировой войны, а потом деятельности учительской семинарии в 1920-х гг.</p>
+                </div>
+            </article>
+
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.burtishki.name">Буртишки</h3>
+                    <span class="status-badge status-partial" data-i18n="villages.status.partial">почти не восстановлена</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.burtishki.date">июль 1944 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">9</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">1</span>
+                    </div>
+                    <div class="stat-item victims">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value">1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">51</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.burtishki.description">На сегодняшний день д. Буртишки Крейванцевского сельсовета весьма малочисленна. По данным переписи 2019 года здесь проживают 4 человека (1 семья).</p>
+                </div>
+            </article>
+
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.zhuprany.name">Жупраны</h3>
+                    <span class="status-badge status-recovered" data-i18n="villages.status.recovered">восстановлена</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.zhuprany.date">июль 1944 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">116</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">67</span>
+                    </div>
+                    <div class="stat-item victims">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value">45</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">700</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.zhuprany.description">На сегодняшний день агрогородок Жупраны — центр сельсовета. Здесь проживает около 800 человек. Здесь на сельском кладбище похоронен Фр. Богушевич, функционирует костёл Св. Петра и Павла, на базе школы работает музей.</p>
+                </div>
+            </article>
+
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.karlovshchina.name">Карловщина</h3>
+                    <span class="status-badge status-recovered" data-i18n="villages.status.recovered">восстановлена</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.karlovshchina.date">июль 1944 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">21</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">14</span>
+                    </div>
+                    <div class="stat-item victims">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value">4</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">87</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.karlovshchina.description">В настоящее время немноголюдная деревня Гольшанского сельсовета. Сейчас здесь проживает около 15 жителей. А в начале XX века здесь было имение Воеводских, следы которого окончательно исчезли в 2012 году.</p>
+                </div>
+            </article>
+
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.koroby.name">Коробы</h3>
+                    <span class="status-badge status-recovered" data-i18n="villages.status.recovered">восстановлена</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.koroby.date">июль 1944 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">69</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value" data-i18n="villages.card.koroby.victims">нет данных</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">210</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.koroby.description">Деревня в Гольшанском сельсовете. Проживает 45 жителей по данным переписи 2019 года.</p>
+                </div>
+            </article>
+
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.narushevtsy.name">Нарушевцы</h3>
+                    <span class="status-badge status-recovered" data-i18n="villages.status.recovered">восстановлена</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.narushevtsy.date">июль 1944 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">37</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">10</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value" data-i18n="villages.card.narushevtsy.victims">нет данных</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">107</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.narushevtsy.description">Деревня Гольшанского сельсовета. Сведений почти нет. Сохранилась водяная мельница и фундаменты построек бывшего фольварка начала XX века.</p>
+                </div>
+            </article>
+
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.trasechenyata.name">Трасеченята</h3>
+                    <span class="status-badge status-recovered" data-i18n="villages.status.recovered">восстановлена</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.trasechenyata.date">июль 1944 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">56</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">26</span>
+                    </div>
+                    <div class="stat-item victims">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value">17</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">240</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.trasechenyata.description">Деревня, в которой проживает около 80 человек, входит в состав Борунского сельсовета, в 3 км от аг. Боруны.</p>
+                </div>
+            </article>
+
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.mariampolskiy.name">Хутор Мариампольский</h3>
+                    <span class="status-badge status-destroyed" data-i18n="villages.status.destroyed">не восстановлен</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.mariampolskiy.date">16 июля 1942 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">1</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item victims">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value">10</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">2</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.mariampolskiy.description">Теперь только крест напоминает о былом хуторе Мариампольский вблизи д. Труханы Гродиевского сельсовета. Два местных жителя и ещё восемь человек, которые находились рядом, были сожжены в хуторском доме.</p>
+                </div>
+            </article>
+
+            <article class="village-card">
+                <div class="village-header">
+                    <h3 data-i18n="villages.card.yakelevshchina.name">Якелевщина</h3>
+                    <span class="status-badge status-destroyed" data-i18n="villages.status.destroyed">не восстановлена</span>
+                </div>
+                <div class="village-stats">
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.date">Дата разрушения</span>
+                        <span class="stat-value" data-i18n="villages.card.yakelevshchina.date">1944 г.</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesBefore">Домов до войны</span>
+                        <span class="stat-value">10</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.housesAfter">Домов после войны</span>
+                        <span class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.victims">Погибло жителей</span>
+                        <span class="stat-value" data-i18n="villages.card.yakelevshchina.victims">нет данных</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label" data-i18n="villages.labels.residents">Жителей до войны</span>
+                        <span class="stat-value">47</span>
+                    </div>
+                </div>
+                <div class="village-description">
+                    <p data-i18n="villages.card.yakelevshchina.description">В настоящий момент в этой деревне Жупранского сельсовета давно никто не проживает. Однако населённый пункт не упразднён, возможно, потому что является родиной известного эмигранта, общественного деятеля Антона Шукелойця.</p>
+                </div>
+            </article>
+        </div>
+
+        <section class="memory-section">
+            <h2 data-i18n="villages.memory.title">Вечная память</h2>
+            <p data-i18n="villages.memory.description">Зажгите свечу в память о жителях сожжённых деревень Ошмянского района</p>
+            <button class="memory-btn" onclick="lightCandle()" data-i18n="villages.memory.light">Зажечь свечу памяти</button>
+            <button class="memory-btn" onclick="showAllVictims()" data-i18n="villages.memory.show">Показать всех погибших</button>
+        </section>
+
+    </main>
+
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.author.title">Автор проекта</h4>
+                    <p data-i18n="index.footer.author.desc">Браницкий Илья Витальевич, учащийся УО «Ошмянский государственный аграрно-экономический колледж»</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.contacts.title">Контакты</h4>
+                    <p><a href="mailto:Ilanmace@gmail.com" data-i18n="index.footer.contacts.email">Ilanmace@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.sources.title">Источники</h4>
+                    <p data-i18n="index.footer.sources.line1">Архивы Ошмянского краеведческого музея им. Ф. Богушевича</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.rights">© 2025. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/burned-villages.js" defer></script>
+</body>
+</html>

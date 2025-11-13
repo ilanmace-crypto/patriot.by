@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru" data-page="liberation">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">Освобождение - Память Победы</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/localization.js"></script>
+    <script src="../assets/js/script.js"></script>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-brand" data-i18n="nav.brand">Память Победы</a>
+            
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link" data-i18n="nav.home">Главная</a></li>
+                <li><a href="chronology.html" class="nav-link" data-i18n="nav.chronology">Хронология</a></li>
+                <li><a href="burned-villages.html" class="nav-link" data-i18n="nav.villages">Сожженные деревни</a></li>
+                <li><a href="genocide.html" class="nav-link" data-i18n="nav.genocide">Геноцид</a></li>
+                <li><a href="liberation.html" class="nav-link active" data-i18n="nav.liberation">Освобождение</a></li>
+                <li><a href="memorials.html" class="nav-link" data-i18n="nav.memorials">Памятники</a></li>
+                <li><a href="lessons.html" class="nav-link" data-i18n="nav.lessons">Уроки</a></li>
+                <li><a href="quiz.html" class="nav-link" data-i18n="nav.quiz">Квиз</a></li>
+            </ul>
+            
+            <div class="nav-utilities">
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="be">BE</button>
+                </div>
+                <button class="theme-toggle theme-toggle--nav" type="button" aria-label="Toggle theme">
+                    <span class="sun">☀️</span><span class="moon">🌙</span>
+                </button>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <header class="page-header" style="background-image: url('../assets/img/boi.jpg');">
+        <div class="page-header-content">
+            <h1 class="page-title" data-i18n="header.title">Освобождение Ошмянского района</h1>
+            <p class="page-subtitle" data-i18n="header.subtitle">7 июля 1944 года - день освобождения</p>
+        </div>
+    </header>
+    
+    <main class="modern-main">
+        <section class="liberation-intro">
+            <h2 data-i18n="liberation.intro.title">Операция «Багратион»</h2>
+            <p class="intro-text" data-i18n="liberation.intro.text">Ошмянский район освобождён 7 июля 1944 г. в ходе Вильнюсской операции (часть «Багратион»). Участвовали 5-я, 11-я гвардейская, 5-я гвардейская танковая армии и 1-я воздушная армия.</p>
+            
+            <div class="liberation-stats">
+                <div class="stat-box">
+                    <div class="stat-icon">🎖️</div>
+                    <div class="stat-number" data-i18n="liberation.stats.0.number">3</div>
+                    <div class="stat-label" data-i18n="liberation.stats.0.label">Армии</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-number" data-i18n="liberation.stats.1.number">7 июля</div>
+                    <div class="stat-label" data-i18n="liberation.stats.1.label">День освобождения</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" data-i18n="liberation.stats.2.number">1944</div>
+                    <div class="stat-label" data-i18n="liberation.stats.2.label">Год победы</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="heroes-section">
+            <h2 data-i18n="liberation.heroes.title">Герои освобождения</h2>
+            
+            <div class="hero-cards">
+                <div class="hero-card">
+                    <div class="hero-image-wrapper">
+                        <img src="../assets/img/Picture4.jpg" alt="Горбунов Д.И." class="hero-image" data-i18n="liberation.heroes.cards.0.image" data-i18n-attr="alt">
+                        <div class="hero-badge" data-i18n="liberation.heroes.cards.0.badge">Герой</div>
+                    </div>
+                    <div class="hero-content">
+                        <h3 data-i18n="liberation.heroes.cards.0.title">Горбунов Д.И.</h3>
+                        <div class="hero-rank" data-i18n="liberation.heroes.cards.0.rank">Старший сержант</div>
+                        <p data-i18n="liberation.heroes.cards.0.text">97-я стрелковая дивизия. Захватил мост через Ошмянку между Нарбутами и Заречьем. Награждён орденом Славы III степени.</p>
+                        <div class="hero-award">
+                            <span class="award-icon">🏅</span>
+                            <span data-i18n="liberation.heroes.cards.0.award">Орден Славы III степени</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-image-wrapper">
+                        <img src="../assets/img/Picture1.jpg" alt="Бои за Ошмяны" class="hero-image" data-i18n="liberation.heroes.cards.1.image" data-i18n-attr="alt">
+                        <div class="hero-badge" data-i18n="liberation.heroes.cards.1.badge">Операция</div>
+                    </div>
+                    <div class="hero-content">
+                        <h3 data-i18n="liberation.heroes.cards.1.title">Бои за Ошмяны</h3>
+                        <div class="hero-rank" data-i18n="liberation.heroes.cards.1.rank">144-я стрелковая дивизия</div>
+                        <p data-i18n="liberation.heroes.cards.1.text">Перерезала железную дорогу Солы-Ошмяны, уничтожила эшелоны врага. Командиры: Донец А.А., Ситко И.П.</p>
+                        <div class="hero-commanders" data-i18n="liberation.heroes.cards.1.commanders">Командиры: Донец А.А., Ситко И.П.</div>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="hero-icon-wrapper">
+                        <div class="tank-icon">🛡️</div>
+                    </div>
+                    <div class="hero-content">
+                        <h3 data-i18n="liberation.heroes.cards.2.title">Танковые корпуса</h3>
+                        <div class="hero-rank" data-i18n="liberation.heroes.cards.2.rank">29-й и 3-й гвардейский</div>
+                        <p data-i18n="liberation.heroes.cards.2.text">29-й (ген.-лейт. Фоминых Я.И.) и 3-й гвардейский (ген.-майор Вовченко И.А.) танковые корпуса освободили Ошмяны, Жупраны, Гольшаны.</p>
+                        <div class="liberation-cities">
+                            <span class="city-tag" data-i18n="liberation.heroes.cards.2.cities.0">Ошмяны</span>
+                            <span class="city-tag" data-i18n="liberation.heroes.cards.2.cities.1">Жупраны</span>
+                            <span class="city-tag" data-i18n="liberation.heroes.cards.2.cities.2">Гольшаны</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="timeline-section">
+            <h2 data-i18n="liberation.timeline.title">Хронология освобождения</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="liberation.timeline.items.0.date">23 июня 1944</div>
+                    <div class="timeline-content">
+                        <h4 data-i18n="liberation.timeline.items.0.title">Начало операции «Багратион»</h4>
+                        <p data-i18n="liberation.timeline.items.0.text">Крупнейшая наступательная операция Красной Армии</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="liberation.timeline.items.1.date">3 июля 1944</div>
+                    <div class="timeline-content">
+                        <h4 data-i18n="liberation.timeline.items.1.title">Минск освобожден</h4>
+                        <p data-i18n="liberation.timeline.items.1.text">Столица Беларуси вернулась под контроль советских войск</p>
+                    </div>
+                </div>
+                <div class="timeline-item highlight">
+                    <div class="timeline-date" data-i18n="liberation.timeline.items.2.date">7 июля 1944</div>
+                    <div class="timeline-content">
+                        <h4 data-i18n="liberation.timeline.items.2.title">Освобождение Ошмян</h4>
+                        <p data-i18n="liberation.timeline.items.2.text">Войска 3-го Белорусского фронта освободили Ошмянский район</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date" data-i18n="liberation.timeline.items.3.date">13 июля 1944</div>
+                    <div class="timeline-content">
+                        <h4 data-i18n="liberation.timeline.items.3.title">Вильнюс освобожден</h4>
+                        <p data-i18n="liberation.timeline.items.3.text">Завершение Вильнюсской операции</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.author.title">Автор проекта</h4>
+                    <p>Браницкий Илья Витальевич, учащийся УО «Ошмянский государственный аграрно-экономический колледж»</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.contacts.title">Контакты</h4>
+                    <p><a href="mailto:Ilanmace@gmail.com">Ilanmace@gmail.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-i18n="index.footer.sources.title">Источники</h4>
+                    <p>Архивы Ошмянского краеведческого музея им. Ф. Богушевича</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p> 2025. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
